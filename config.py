@@ -11,7 +11,7 @@ class Config(object):
     SECRET_KEY = "EjpNVSNQTyGi1VvWECj9TvC/+kq3oujee2kTfQUs8yCM6xX9Yjq52v54g+HVoknA"
 
     # SQLAlchemy
-    SQLALCHEMY_DATABASE_URI = "mysql://root:mysql@127.0.0.1:3306/Journal"
+    SQLALCHEMY_DATABASE_URI = "mysql://root:123456@127.0.0.1:3306/Journal"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # redis
