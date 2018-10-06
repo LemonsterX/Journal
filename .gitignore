@@ -1,4 +1,4 @@
 .idea/
 *.py[cop]
-log/
+logs/
 migration/

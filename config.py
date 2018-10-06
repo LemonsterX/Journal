@@ -1,6 +1,9 @@
 # 创建redis存储对象，并在配置中填写相关配置
 import redis
 
+# 使用logging提供的模块级别的函数记录日志
+import logging
+
 
 class Config(object):
     """工程配置信息"""
@@ -21,6 +24,9 @@ class Config(object):
     SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)
     PERMANENT_SESSION_LIFETIME = 86400  # session 的有效期，秒
 
+    # 默认日志等级
+    LOG_LEVEL = logging.DEBUG
+
 
 class DevelopmentConfig(Config):
     """开发模式的配置"""
@@ -29,7 +35,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     """生产模式下的配置"""
-    pass
+    LOG_LEVEL = logging.ERROR
 
 
 # 定义配置字典
